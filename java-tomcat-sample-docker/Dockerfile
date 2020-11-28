@@ -1,6 +1,5 @@
 FROM tomcat:8.0
-COPY **/*.war /usr/local/tomcat/webapps/
+COPY build /usr/local/tomcat/webapps/
 RUN pwd
-RUN cp -a **/*.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
